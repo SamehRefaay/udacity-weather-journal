@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:100,200,400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-holder">
+        <div class="logo">
+          <img src="img/sun.png" alt="logo" srcset="" />
+          <h1 class="headline">Weather Journal App</h1>
+        </div>
+        <div class="user-input-holder">
+          <input
+            type="text"
+            id="location-user-input"
+            placeholder="City Name or ZIP"
+          />
+          <input
+            type="text"
+            id="feelings-user-input"
+            placeholder="How are you feeling today?"
+            class="myInput"
+          />
+          <button id="generate" type="submit">Generate</button>
+        </div>
+      </div>
+      <div class="not-found gone">
+        404 City Not Found, Please check your ZIP code
+      </div>
+      <!-- start main content  -->
+      <section class="main-content-section">
+        <div class="container">
+          <!-- user input fellings -->
+          <div class="feelings-container"></div>
+          <!-- weather data + date holder -->
+          <div class="main-data-container">
+            <div class="tempAndUnits-holder">
+              <div id="temp"></div>
+              <div class="celsius"></div>
+              <div class="separator"></div>
+              <div class="fahrenheit active"></div>
+            </div>
+            <div class="cityAndDate-holder">
+              <div id="city"></div>
+              <div id="date"></div>
+            </div>
+            <div class="weatherImg-holder">
+              <img />
+              <div class="weather-description"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end main content  -->
+
+      <!-- start aside content  -->
+      <aside class="aside-content-holder gone">
+        <div class="container">
+          <div class="locations"></div>
+          <hr />
+          <div class="weather-details">
+            <!-- start weather details  -->
+            <p>Weather Details</p>
+            <!-- cloudy holder -->
+            <div class="cloudy holder">
+              <div class="title">Cloudy</div>
+              <div class="value">--</div>
+            </div>
+            <!-- Humidity -->
+            <div class="humidity holder">
+              <div class="title">Humidity</div>
+              <div class="value">--</div>
+            </div>
+            <!-- Wind -->
+            <div class="wind holder">
+              <div class="title">Wind</div>
+              <div class="value">--</div>
+            </div>
+            <!-- Rain -->
+            <div class="visibility holder">
+              <div class="title">Visibility</div>
+              <div class="value">--</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>

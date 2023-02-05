@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+}
+
+#app {
+  height: 100vh;
+  background-image: url("img/valentin-muller-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-rows: auto 1fr;
+}
+/* header */
+.header-holder {
+  padding: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+/* logo */
+.header-holder .logo {
+  display: flex;
+  gap: 10px;
+}
+
+/* logo image */
+.header-holder .logo img {
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+}
+
+/* zipcode and user fellings */
+.user-input-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.user-input-holder #location-user-input,
+.user-input-holder #feelings-user-input,
+.user-input-holder #generate {
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.user-input-holder #location-user-input:focus,
+.user-input-holder #feelings-user-input:focus {
+  outline: none;
+}
+
+.user-input-holder #generate {
+  background-color: orange;
+}
+
+/* main section  */
+.main-content-section {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.main-content-section .container {
+  padding-left: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: white;
+}
+
+.main-content-section .feelings-container {
+  color: white;
+}
+
+.feelings-container #content {
+  font-size: 1.5em;
+}
+
+.main-content-section .main-data-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-data-container .tempAndUnits-holder {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.main-content-section #temp {
+  font-size: 8em;
+  font-weight: 700;
+  padding: 0px;
+}
+
+/* temp unites celsuis and kelvin */
+.tempAndUnits-holder .celsius,
+.tempAndUnits-holder .separator,
+.tempAndUnits-holder .fahrenheit {
+  font-size: 2em;
+}
+
+.tempAndUnits-holder .celsius,
+.tempAndUnits-holder .fahrenheit {
+  cursor: pointer;
+  color: lightgrey;
+}
+
+.tempAndUnits-holder .active {
+  color: white;
+  font-weight: 300;
+}
+
+.main-content-section .cityAndDate-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-content-section #city {
+  font-size: 2.5em;
+  letter-spacing: 3px;
+}
+
+.main-content-section #date {
+  font-size: 1.5em;
+}
+
+.main-content-section .weatherImg-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherImg-holder img {
+  padding: 0;
+}
+.weatherImg-holder .weather-description {
+  font-size: 1.5em;
+}
+
+.not-found {
+  font-size: 2em;
+  color: white;
+  margin: 5em auto;
+}
+
+.aside-content-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 2px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.aside-content-holder .container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aside-content-holder .locations,
+.aside-content-holder .weather-details {
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.location {
+  cursor: pointer;
+}
+
+.aside-content-holder .holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+.aside-content-holder .holder .title,
+.aside-content-holder .container .location {
+  color: #ccc;
+}
+
+.gone {
+  display: none;
+}
